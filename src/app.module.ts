@@ -11,6 +11,7 @@ import { FieldsModule } from './fields/fields.module.js';
 import { AuthModule } from './auth/auth.module.js';
 import { CropsModule } from './crops/crops.module.js';
 import { CampaignsModule } from './campaigns/campaigns.module.js';
+import { InterventionsModule } from './interventions/interventions.module.js';
 
 @Module({
   imports: [
@@ -39,6 +40,7 @@ import { CampaignsModule } from './campaigns/campaigns.module.js';
     AuthModule,
     CampaignsModule,
     CropsModule,
+    InterventionsModule,
   ],
 
   controllers: [AppController],
