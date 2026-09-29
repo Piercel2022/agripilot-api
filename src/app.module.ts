@@ -10,6 +10,7 @@ import { FarmsModule } from './farms/farms.module.js';
 import { FieldsModule } from './fields/fields.module.js';
 import { AuthModule } from './auth/auth.module.js';
 import { CropsModule } from './crops/crops.module.js';
+import { CampaignsModule } from './campaigns/campaigns.module.js';
 
 @Module({
   imports: [
@@ -36,6 +37,7 @@ import { CropsModule } from './crops/crops.module.js';
     FarmsModule,
     FieldsModule,
     AuthModule,
+    CampaignsModule,
     CropsModule,
   ],
 
