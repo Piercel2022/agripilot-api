@@ -9,6 +9,7 @@ import { UsersModule } from './users/users.module.js';
 import { FarmsModule } from './farms/farms.module.js';
 import { FieldsModule } from './fields/fields.module.js';
 import { AuthModule } from './auth/auth.module.js';
+import { CropsModule } from './crops/crops.module.js';
 
 @Module({
   imports: [
@@ -31,13 +32,11 @@ import { AuthModule } from './auth/auth.module.js';
     }),
 
     OrganizationsModule,
-
     UsersModule,
-
     FarmsModule,
-
     FieldsModule,
     AuthModule,
+    CropsModule,
   ],
 
   controllers: [AppController],
