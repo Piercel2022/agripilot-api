@@ -12,6 +12,7 @@ import { AuthModule } from './auth/auth.module.js';
 import { CropsModule } from './crops/crops.module.js';
 import { CampaignsModule } from './campaigns/campaigns.module.js';
 import { InterventionsModule } from './interventions/interventions.module.js';
+import { IrrigationModule } from './irrigation/irrigation.module.js';
 
 @Module({
   imports: [
@@ -41,6 +42,7 @@ import { InterventionsModule } from './interventions/interventions.module.js';
     CampaignsModule,
     CropsModule,
     InterventionsModule,
+    IrrigationModule,
   ],
 
   controllers: [AppController],
