@@ -14,6 +14,7 @@ import { CampaignsModule } from './campaigns/campaigns.module.js';
 import { InterventionsModule } from './interventions/interventions.module.js';
 import { IrrigationModule } from './irrigation/irrigation.module.js';
 import { FertilisationModule } from './fertilisation/fertilisation.module.js';
+import { ObservationsModule } from './observations/observations.module.js';
 
 @Module({
   imports: [
@@ -45,6 +46,7 @@ import { FertilisationModule } from './fertilisation/fertilisation.module.js';
     InterventionsModule,
     IrrigationModule,
     FertilisationModule,
+    ObservationsModule,
   ],
 
   controllers: [AppController],
