@@ -17,6 +17,10 @@ import {
 export class CreatePhytosanitaryTreatmentDto {
   @IsString()
   @IsNotEmpty()
+  interventionId!: string;
+
+  @IsString()
+  @IsNotEmpty()
   @MaxLength(150)
   name!: string;
 
@@ -62,4 +66,3 @@ export class CreatePhytosanitaryTreatmentDto {
   @IsString()
   notes?: string;
 }
-
