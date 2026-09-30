@@ -13,6 +13,7 @@ import { CropsModule } from './crops/crops.module.js';
 import { CampaignsModule } from './campaigns/campaigns.module.js';
 import { InterventionsModule } from './interventions/interventions.module.js';
 import { IrrigationModule } from './irrigation/irrigation.module.js';
+import { FertilisationModule } from './fertilisation/fertilisation.module.js';
 
 @Module({
   imports: [
@@ -43,6 +44,7 @@ import { IrrigationModule } from './irrigation/irrigation.module.js';
     CropsModule,
     InterventionsModule,
     IrrigationModule,
+    FertilisationModule,
   ],
 
   controllers: [AppController],
