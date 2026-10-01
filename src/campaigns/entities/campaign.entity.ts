@@ -4,11 +4,13 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 
 import type { Crop } from '../../crops/entities/crop.entity.js';
+import type { Intervention } from '../../interventions/entities/intervention.entity.js';
 
 export enum CampaignStatus {
   PLANNED = 'planned',
@@ -50,6 +52,9 @@ export class Campaign {
   })
   @JoinColumn({ name: 'crop_id' })
   crop!: Crop;
+
+  @OneToMany('Intervention', 'campaign')
+  interventions!: Intervention[];
 
   @CreateDateColumn()
   createdAt!: Date;
