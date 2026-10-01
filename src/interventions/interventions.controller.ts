@@ -4,6 +4,7 @@ import {
   Delete,
   Get,
   Param,
+  ParseUUIDPipe,
   Patch,
   Post,
   Req,
@@ -58,7 +59,7 @@ export class InterventionsController {
 
   @Get(':id')
   findOne(
-    @Param('id') id: string,
+    @Param('id', ParseUUIDPipe) id: string,
     @Req() request: AuthenticatedRequest,
   ) {
     return this.interventionsService.findOne(
@@ -69,7 +70,7 @@ export class InterventionsController {
 
   @Patch(':id')
   update(
-    @Param('id') id: string,
+    @Param('id', ParseUUIDPipe) id: string,
     @Body() updateInterventionDto: UpdateInterventionDto,
     @Req() request: AuthenticatedRequest,
   ) {
@@ -82,7 +83,7 @@ export class InterventionsController {
 
   @Delete(':id')
   remove(
-    @Param('id') id: string,
+    @Param('id', ParseUUIDPipe) id: string,
     @Req() request: AuthenticatedRequest,
   ) {
     return this.interventionsService.remove(
