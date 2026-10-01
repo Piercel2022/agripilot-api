@@ -6,6 +6,7 @@ import {
   Param,
   Patch,
   Post,
+  Query,
   Req,
   UseGuards,
 } from '@nestjs/common';
@@ -50,9 +51,15 @@ export class HarvestsController {
   }
 
   @Get()
-  findAll(@Req() request: AuthenticatedRequest) {
+  findAll(
+    @Query('cropId') cropId: string | undefined,
+    @Query('campaignId') campaignId: string | undefined,
+    @Req() request: AuthenticatedRequest,
+  ) {
     return this.harvestsService.findAll(
       request.user.organization.id,
+      cropId,
+      campaignId,
     );
   }
 
