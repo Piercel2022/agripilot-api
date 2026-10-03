@@ -4,6 +4,7 @@ import {
   Delete,
   Get,
   Param,
+  ParseUUIDPipe,
   Patch,
   Post,
   Req,
@@ -51,7 +52,7 @@ export class FertilisationController {
 
   @Get(':id')
   findOne(
-    @Param('id') id: string,
+    @Param('id', ParseUUIDPipe) id: string,
     @Req() request: AuthenticatedRequest,
   ) {
     return this.fertilisationService.findOne(
@@ -62,7 +63,7 @@ export class FertilisationController {
 
   @Patch(':id')
   update(
-    @Param('id') id: string,
+    @Param('id', ParseUUIDPipe) id: string,
     @Body() updateFertilisationDto: UpdateFertilisationDto,
     @Req() request: AuthenticatedRequest,
   ) {
@@ -75,7 +76,7 @@ export class FertilisationController {
 
   @Delete(':id')
   remove(
-    @Param('id') id: string,
+    @Param('id', ParseUUIDPipe) id: string,
     @Req() request: AuthenticatedRequest,
   ) {
     return this.fertilisationService.remove(
