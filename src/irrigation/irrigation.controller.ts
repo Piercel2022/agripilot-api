@@ -4,6 +4,7 @@ import {
   Delete,
   Get,
   Param,
+  ParseUUIDPipe,
   Patch,
   Post,
   Req,
@@ -51,7 +52,7 @@ export class IrrigationController {
 
   @Get(':id')
   findOne(
-    @Param('id') id: string,
+    @Param('id', ParseUUIDPipe) id: string,
     @Req() request: AuthenticatedRequest,
   ) {
     return this.irrigationService.findOne(
@@ -62,7 +63,7 @@ export class IrrigationController {
 
   @Patch(':id')
   update(
-    @Param('id') id: string,
+    @Param('id', ParseUUIDPipe) id: string,
     @Body() updateIrrigationDto: UpdateIrrigationDto,
     @Req() request: AuthenticatedRequest,
   ) {
@@ -75,7 +76,7 @@ export class IrrigationController {
 
   @Delete(':id')
   remove(
-    @Param('id') id: string,
+    @Param('id', ParseUUIDPipe) id: string,
     @Req() request: AuthenticatedRequest,
   ) {
     return this.irrigationService.remove(
