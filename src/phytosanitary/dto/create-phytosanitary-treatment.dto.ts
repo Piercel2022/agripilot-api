@@ -10,6 +10,7 @@ import {
 
 import {
   ApplicationMethod,
+  PhytosanitaryStatus,
   TreatmentType,
   TreatmentUnit,
 } from '../entities/phytosanitary-treatment.entity.js';
@@ -61,6 +62,10 @@ export class CreatePhytosanitaryTreatmentDto {
   @IsOptional()
   @IsEnum(ApplicationMethod)
   applicationMethod?: ApplicationMethod;
+
+  @IsOptional()
+  @IsEnum(PhytosanitaryStatus)
+  status?: PhytosanitaryStatus;
 
   @IsOptional()
   @IsString()

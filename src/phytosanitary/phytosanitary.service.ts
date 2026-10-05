@@ -64,6 +64,7 @@ export class PhytosanitaryService {
       target: createPhytosanitaryTreatmentDto.target,
       applicationMethod:
         createPhytosanitaryTreatmentDto.applicationMethod,
+      status: createPhytosanitaryTreatmentDto.status,
       notes: createPhytosanitaryTreatmentDto.notes,
       intervention,
     });
@@ -185,6 +186,9 @@ export class PhytosanitaryService {
       updatePhytosanitaryTreatmentDto.applicationMethod ??
       treatment.applicationMethod;
 
+    treatment.status =
+      updatePhytosanitaryTreatmentDto.status ?? treatment.status;
+
     treatment.notes =
       updatePhytosanitaryTreatmentDto.notes ?? treatment.notes;
 
@@ -197,4 +201,3 @@ export class PhytosanitaryService {
     await this.phytosanitaryRepository.remove(treatment);
   }
 }
-
