@@ -17,6 +17,7 @@ import { FertilisationModule } from './fertilisation/fertilisation.module.js';
 import { ObservationsModule } from './observations/observations.module.js';
 import { PhytosanitaryModule } from './phytosanitary/phytosanitary.module.js';
 import { FieldOperationsModule } from './field-operations/field-operations.module.js';
+import { HarvestsModule } from './harvests/harvests.module.js';
 
 @Module({
   imports: [
@@ -51,6 +52,7 @@ import { FieldOperationsModule } from './field-operations/field-operations.modul
     ObservationsModule,
     PhytosanitaryModule,
     FieldOperationsModule,
+    HarvestsModule,
   ],
 
   controllers: [AppController],
